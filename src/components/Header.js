@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  height: 10vh;
+  height: 8vh;
   background: #fff;
   position: fixed;
   top: 0;
@@ -15,13 +15,14 @@ const Container = styled.div`
   align-items: center;
   z-index: 100;
 
-  padding: 0 50px 0 50px;
+  padding: 0 25px;
 
   @media (min-width: 768px) {
-    padding: 0 50px 0 50px;
+    padding: 0 50px;
   }
+
   @media (min-width: 992px) {
-    padding: 0 50px 0 50px;
+    padding: 0 100px;
   }
 `;
 
@@ -31,18 +32,34 @@ const Logo = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
+  cursor: pointer;
+
   width: 5%;
-  height: 70px;
+  height: 50px;
 `;
 const Nav = styled.ul`
   display: flex;
   justify-content: space-between;
   list-style: none;
-  min-width: 40%;
+  width: 50%; //BURGERMENU
+  margin: 3px;
 
-  color: #6a3b3e;
-  font-weight: 400;
-  font-size: 14px;
+  li {
+    color: #6a3b3e;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+  @media (min-width: 1200px) {
+    width: 40%;
+  }
 `;
 
 export const Header = () => {

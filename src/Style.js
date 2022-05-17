@@ -8,3 +8,48 @@ export const ContainerSektion = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const Button = styled.div`
+  border: 1px solid #fff;
+  padding: 8px 40px;
+  cursor: pointer;
+  color: ${(props) => props.color};
+
+  &:hover {
+    background: #fff;
+    color: #6a3b3e;
+    transition: all 0.4s ease-in-out;
+  }
+`;
+
+export const Headline = styled.h2`
+  font-size: 30px;
+  font-weight: 600;
+  padding: 50px 25px 5px 25px;
+  text-align: center;
+  color: ${(props) => props.color};
+
+  @media (min-width: 768px) {
+    padding: 50px 50px 5px 50px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 100px 50px 5px 50px;
+  }
+`;
+
+export const SubHeadline = styled.h3`
+  font-size: 18px;
+  font-weight: 200;
+  padding: 0px 25px 25px 25px;
+  text-align: center;
+  color: ${(props) => props.color};
+
+  @media (min-width: 768px) {
+    padding: 0px 50px 25px 50px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 0px 50px 25px 50px;
+  }
+`;

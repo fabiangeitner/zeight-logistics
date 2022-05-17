@@ -2,21 +2,22 @@ import styled from "styled-components";
 import { MdLocalShipping, MdDirectionsBoatFilled } from "react-icons/md";
 import { RiPlaneLine } from "react-icons/ri";
 import { FaWarehouse } from "react-icons/fa";
+import { Headline, SubHeadline } from "../Style";
 
 const Wrapper = styled.div`
   background: #fff;
   width: 100%;
   height: auto;
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  row-gap: 30px;
 
   padding: 25px;
 
   @media (min-width: 768px) {
     padding: 50px;
-    flex-direction: row;
   }
 
   @media (min-width: 992px) {
@@ -26,16 +27,10 @@ const Wrapper = styled.div`
 
 const ServiceItem = styled.div`
   text-align: center;
-  border: 1px solid lightgrey;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   padding: 25px;
   transition: all 0.3s ease-in-out;
-
-  margin-bottom: 10%;
-  &:last-child {
-    margin-bottom: 0;
-  }
 
   &:hover {
     transform: none;
@@ -43,12 +38,21 @@ const ServiceItem = styled.div`
 
   h2 {
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 5%;
   }
 
-  @media (min-width: 768px) {
-    width: 20%;
-    margin-bottom: 0;
+  p {
+    font-weight: 200;
+  }
+
+  @media (min-width: 576px) {
+    width: 50%;
+  }
+
+  @media (min-width: 992px) {
+    width: 25%;
     &:hover {
       transform: scale(1.1);
     }
@@ -56,67 +60,66 @@ const ServiceItem = styled.div`
 `;
 
 const TransportIcon = styled(MdLocalShipping)`
-  font-size: 100px;
+  font-size: 50px;
   margin-bottom: 5%;
   color: #6a3b3e;
-
-  @media (min-width: 768px) {
-    font-size: 50px;
-    margin-bottom: 10%;
-  }
 `;
 const LuftIcon = styled(RiPlaneLine)`
-  font-size: 100px;
+  font-size: 50px;
   margin-bottom: 5%;
   color: #6a3b3e;
-
-  @media (min-width: 768px) {
-    font-size: 50px;
-    margin-bottom: 10%;
-  }
 `;
 const SeeIcon = styled(MdDirectionsBoatFilled)`
-  font-size: 100px;
+  font-size: 50px;
   margin-bottom: 5%;
   color: #6a3b3e;
-
-  @media (min-width: 768px) {
-    font-size: 50px;
-    margin-bottom: 10%;
-  }
 `;
 const LogistikIcon = styled(FaWarehouse)`
-  font-size: 100px;
+  font-size: 50px;
   margin-bottom: 5%;
   color: #6a3b3e;
-
-  @media (min-width: 768px) {
-    font-size: 50px;
-    margin-bottom: 10%;
-  }
 `;
 
 export const Service = () => {
   return (
-    <div>
+    <>
+      <Headline>Leistungen</Headline>
+      <SubHeadline>Wir sind Spezialisten in unseren Fachbereichen!</SubHeadline>
       <Wrapper>
         <ServiceItem>
           <TransportIcon />
           <h2>Transport</h2>
+          <p>
+            Wir haben im europäischen Raum starke Partnerschaften für LKW-,
+            Gefahrgut- und High & Heavy-Transporte aufgebaut.
+          </p>
         </ServiceItem>
         <ServiceItem>
           <LuftIcon />
           <h2>Luftfracht</h2>
+          <p>
+            Luftfracht bietet Ihnen die Flexibilität und Geschwindigkeit. Ihr
+            Fahrzeug, schnell, sicher und zuverlässig an jeden Flughafen
+            weltweit.
+          </p>
         </ServiceItem>
         <ServiceItem>
           <SeeIcon />
           <h2>Seefracht</h2>
+          <p>
+            RoRo ( Roll on Roll off) & Vollcontainer (FCL) bis hin zur
+            Sammelladung (LCL)Verschiffungen mit 20 Jahren Erfahrung!
+          </p>
         </ServiceItem>
         <ServiceItem>
           <LogistikIcon />
           <h2>Logistik</h2>
+          <p>
+            Aufgrund ausgewählter Partner ist unsere Spedition in der Lage, Ihre
+            Ware auch langfristig einzulagern.
+          </p>
         </ServiceItem>
       </Wrapper>
-    </div>
+    </>
   );
 };

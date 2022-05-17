@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ContainerSektion } from "../Style";
+import { ContainerSektion, Button } from "../Style";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -31,33 +31,27 @@ const Headline = styled.div`
 
   h1 {
     font-weight: 600;
-    font-size: 80px;
+    font-size: 60px;
   }
 
   h2 {
     font-weight: 200;
-    font-size: 35px;
+    font-size: 30px;
   }
 
   div {
     margin-bottom: 50px;
   }
 
-  padding: 10vh 25px 50px 25px;
+  padding: 8vh 25px 50px 25px;
 
   @media (min-width: 768px) {
-    padding: 10vh 50px 75px 50px;
+    padding: 8vh 50px 75px 50px;
   }
 
   @media (min-width: 992px) {
-    padding: 10vh 50px 100px 50px;
+    padding: 8vh 50px 100px 50px;
   }
-`;
-
-const Button = styled.div`
-  border: 1px solid #fff;
-  padding: 8px 40px;
-  font-size: 17px;
 `;
 
 const Img = styled.div`
@@ -74,15 +68,15 @@ const Img = styled.div`
   position: absolute;
   z-index: 5;
 
-  padding: 10vh 25px 50px 25px;
+  padding: 8vh 25px 50px 25px;
 
   @media (min-width: 768px) {
-    padding: 10vh 50px 75px 50px;
+    padding: 8vh 50px 75px 50px;
     opacity: 1;
   }
 
   @media (min-width: 992px) {
-    padding: 10vh 50px 100px 50px;
+    padding: 8vh 50px 100px 50px;
   }
 `;
 
