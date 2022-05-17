@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Headline, SubHeadline, Button } from "../Style";
+import { Headline, SubHeadline, Button, ButtonText } from "../Style";
 
 const Sektion = styled.div`
   background-color: #20a4f3;
@@ -45,7 +45,11 @@ export const Kontakt = () => {
         </SubHeadline>
         <Wrapper>
           <Mail>info@zeight-solutions.com</Mail>
-          <Button color="#fff">Kontakt aufnehmen</Button>
+          <Button>
+            <ButtonText color="#fff" to="/">
+              Kontakt aufnehmen
+            </ButtonText>
+          </Button>
         </Wrapper>
       </Sektion>
     </>

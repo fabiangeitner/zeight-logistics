@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { Headline, SubHeadline, Button } from "../Style";
+import { Headline, SubHeadline, Button, ButtonText } from "../Style";
 
 const Sektion = styled.div`
   background-color: #0a1128;
@@ -62,17 +62,29 @@ export const Karriere = () => {
         <Wrapper>
           <Stellenbeschreibung>
             <Stelle>Leiter Disponent - Fachbereich: Seefracht (m/w/d)</Stelle>
-            <Button color="#fff">Jetzt Bewerben</Button>
+            <Button>
+              <ButtonText color="#fff" to="/">
+                Jetzt Bewerben
+              </ButtonText>
+            </Button>
           </Stellenbeschreibung>
           <Stellenbeschreibung>
             <Stelle>
               Fachkraft für Buchhaltung und Rechnungswesen (m/w/d)
             </Stelle>
-            <Button color="#fff">Jetzt Bewerben</Button>
+            <Button>
+              <ButtonText color="#fff" to="/">
+                Jetzt Bewerben
+              </ButtonText>
+            </Button>
           </Stellenbeschreibung>
           <Stellenbeschreibung>
             <Stelle>Ausbildung - Fachkraft für Lagerlogistik (m/w/d)</Stelle>
-            <Button color="#fff">Jetzt Bewerben</Button>
+            <Button>
+              <ButtonText color="#fff" to="/">
+                Jetzt Bewerben
+              </ButtonText>
+            </Button>
           </Stellenbeschreibung>
         </Wrapper>
       </Sektion>

@@ -82,7 +82,7 @@ const LogistikIcon = styled(FaWarehouse)`
 
 export const Service = () => {
   return (
-    <>
+    <div>
       <Headline>Leistungen</Headline>
       <SubHeadline>Wir sind Spezialisten in unseren Fachbereichen!</SubHeadline>
       <Wrapper>
@@ -120,6 +120,6 @@ export const Service = () => {
           </p>
         </ServiceItem>
       </Wrapper>
-    </>
+    </div>
   );
 };

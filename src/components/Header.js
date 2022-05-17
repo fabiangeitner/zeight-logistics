@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -26,7 +26,7 @@ const Container = styled.div`
   }
 `;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
   background-image: url("https://pngimage.net/wp-content/uploads/2018/06/simbolo-logistica-png-.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -44,16 +44,6 @@ const Nav = styled.ul`
   width: 50%; //BURGERMENU
   margin: 3px;
 
-  li {
-    color: #6a3b3e;
-    font-weight: 400;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-
   @media (min-width: 992px) {
     width: 50%;
   }
@@ -62,17 +52,27 @@ const Nav = styled.ul`
   }
 `;
 
+const NavLink = styled(Link)`
+  color: #6a3b3e;
+  font-weight: 400;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+`;
+
 export const Header = () => {
   return (
     <div>
       <Container>
-        <Logo></Logo>
+        <Logo to="/" />
         <Nav>
-          <li>Startseite</li>
-          <li>Service</li>
-          <li>Unternehmen</li>
-          <li>Karriere</li>
-          <li>Kontakt</li>
+          <NavLink to="/">Startseite</NavLink>
+          <NavLink to="/service">Service</NavLink>
+          <NavLink to="/unternehmen">Unternehmen</NavLink>
+          <NavLink to="/karriere">Karriere</NavLink>
+          <NavLink to="/kontakt">Kontakt</NavLink>
         </Nav>
       </Container>
     </div>

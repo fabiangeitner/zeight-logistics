@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const ContainerSektion = styled.div`
   width: 100%;
@@ -9,11 +10,13 @@ export const ContainerSektion = styled.div`
   align-items: center;
 `;
 
-export const Button = styled.div`
-  border: 1px solid #fff;
+export const Button = styled.div``;
+
+export const ButtonText = styled(Link)`
   padding: 8px 40px;
-  cursor: pointer;
+  border: 1px solid #fff;
   color: ${(props) => props.color};
+  text-decoration: none;
 
   &:hover {
     background: #fff;

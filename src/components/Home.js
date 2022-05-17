@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ContainerSektion, Button } from "../Style";
+import { ContainerSektion, Button, ButtonText } from "../Style";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -100,7 +100,11 @@ export const Home = () => {
               <h1>Zeight Solutions GmbH</h1>
               <h2>we love to deliver you.</h2>
             </div>
-            <Button>Service</Button>
+            <Button>
+              <ButtonText to="/" color="#fff">
+                Service
+              </ButtonText>
+            </Button>
           </Headline>
           <Img />
         </Wrapper>

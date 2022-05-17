@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.div`
   width: 100%;
-  min-height: 15vh;
+  height: 10vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,10 +40,12 @@ const FooterNav = styled.div`
   @media (min-width: 1100px) {
     width: 20%;
   }
+`;
 
-  li {
-    list-style: none;
-  }
+const FooterLink = styled(Link)`
+  list-style: none;
+  text-decoration: none;
+  color: #000;
 `;
 
 export const Footer = () => {
@@ -51,8 +54,8 @@ export const Footer = () => {
       <FooterContainer>
         <div>© 2022 Fabgei</div>
         <FooterNav>
-          <li>Datenschutz</li>
-          <li>Impressum</li>
+          <FooterLink to="/impressum">Impressum</FooterLink>
+          <FooterLink to="/datenschutz">Datenschutz</FooterLink>
         </FooterNav>
       </FooterContainer>
     </div>
