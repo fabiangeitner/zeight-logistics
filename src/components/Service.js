@@ -62,22 +62,22 @@ const ServiceItem = styled.div`
 const TransportIcon = styled(MdLocalShipping)`
   font-size: 50px;
   margin-bottom: 5%;
-  color: #6a3b3e;
+  color: #20a4f3;
 `;
 const LuftIcon = styled(RiPlaneLine)`
   font-size: 50px;
   margin-bottom: 5%;
-  color: #6a3b3e;
+  color: #20a4f3;
 `;
 const SeeIcon = styled(MdDirectionsBoatFilled)`
   font-size: 50px;
   margin-bottom: 5%;
-  color: #6a3b3e;
+  color: #20a4f3;
 `;
 const LogistikIcon = styled(FaWarehouse)`
   font-size: 50px;
   margin-bottom: 5%;
-  color: #6a3b3e;
+  color: #20a4f3;
 `;
 
 export const Service = () => {

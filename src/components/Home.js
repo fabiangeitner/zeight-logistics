@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { ContainerSektion, Button, ButtonText } from "../Style";
+//Image
+import TruckImg from "../utils/home-truck.jpg";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -58,7 +60,7 @@ const Img = styled.div`
   width: 100%;
   height: 100%;
 
-  background-image: url("https://images.unsplash.com/photo-1446694292248-2c2a7e575b1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+  background-image: url(${TruckImg});
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,7 +85,7 @@ const Img = styled.div`
 const Overlay = styled.div`
   width: 100%;
   height: 100vh;
-  background: #6a3b3e;
+  background: #20a4f3;
   opacity: 0.7;
   z-index: 10;
   position: absolute;
@@ -101,7 +103,7 @@ export const Home = () => {
               <h2>we love to deliver you.</h2>
             </div>
             <Button>
-              <ButtonText to="/" color="#fff">
+              <ButtonText to="/" color="#fff" border="#fff">
                 Service
               </ButtonText>
             </Button>

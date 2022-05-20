@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import VorteileImg from "../utils/vorteile-container.jpg";
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,13 +11,12 @@ const Wrapper = styled.div`
 const HeadlineBox = styled.div`
   width: 100%;
   height: auto;
-  background-color: #20a4f3;
+  background-color: #0a1128;
 
   color: #fff;
 
   @media (min-width: 768px) {
     width: 50%;
-    background-color: #0a1128;
   }
 `;
 
@@ -45,12 +45,12 @@ const Info = styled.div`
 `;
 const InfoImg = styled.div`
   display: none;
-  background-image: url("https://images.unsplash.com/photo-1446694292248-2c2a7e575b1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+  background-image: url(${VorteileImg});
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.4;
+  opacity: 0.8;
 
   @media (min-width: 768px) {
     display: block;
@@ -66,7 +66,7 @@ const VorteileBox = styled.ol`
   height: auto;
 
   li {
-    padding-bottom: 5%;
+    padding-bottom: 15%;
     list-style: decimal-leading-zero inside;
     font-size: 20px;
     font-weight: 600;

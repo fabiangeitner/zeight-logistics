@@ -1,5 +1,8 @@
 import styled from "styled-components";
 import { ContainerSektion, Headline, SubHeadline } from "../Style";
+//Images
+import HafenImg from "../utils/unternehmen-hafen.jpg";
+import FuhrparkImg from "../utils/unternehmen-fuhrpark.jpg";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -43,7 +46,7 @@ const UnternehmenImg = styled.div`
   width: 100%;
   height: 50vh;
 
-  background-image: url("https://images.unsplash.com/photo-1620306677888-10e367e6293d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-image: url(${HafenImg});
   background-color: black;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +64,7 @@ const MitarbeiterImg = styled.div`
     height: 50vh;
     display: block;
 
-    background-image: url("https://images.unsplash.com/photo-1577075473292-5f62dfae5522?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80");
+    background-image: url(${FuhrparkImg});
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;

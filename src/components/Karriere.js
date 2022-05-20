@@ -31,22 +31,26 @@ const Stellenbeschreibung = styled.div`
   justify-content: space-between;
   width: 70%;
 
-  padding-bottom: 3%;
+  padding-bottom: 15%;
   border-bottom: 1px solid #fff;
 
   margin-bottom: 5%;
+
   &:last-child {
-    margin-bottom: 0%;
     padding-bottom: 0%;
 
     border-bottom: none;
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 5%;
   }
 `;
 
 const Stelle = styled.h4`
   width: 100%;
   color: #fff;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
   @media (min-width: 768px) {
     width: 50%;
     margin-bottom: 0;

@@ -1,5 +1,11 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+//Image
+import LogoImg from "../utils/logo.png";
+//Icon
+import { GiHamburgerMenu } from "react-icons/gi";
+import { MobileMenu } from "./MobileMenu";
 
 const Container = styled.div`
   width: 100%;
@@ -27,24 +33,25 @@ const Container = styled.div`
 `;
 
 const Logo = styled(Link)`
-  background-image: url("https://pngimage.net/wp-content/uploads/2018/06/simbolo-logistica-png-.png");
+  background-image: url(${LogoImg});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
   cursor: pointer;
 
-  width: 5%;
-  height: 50px;
+  width: 7%;
+  height: 40px;
 `;
 const Nav = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   list-style: none;
-  width: 50%; //BURGERMENU
+  width: 50%;
   margin: 3px;
 
   @media (min-width: 992px) {
+    justify-content: space-between;
     width: 50%;
   }
   @media (min-width: 1200px) {
@@ -53,16 +60,32 @@ const Nav = styled.ul`
 `;
 
 const NavLink = styled(Link)`
-  color: #6a3b3e;
+  color: #0a1128;
   font-weight: 400;
   text-decoration: none;
+  display: none;
 
   &:hover {
     opacity: 0.5;
   }
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
+const BurgerMenu = styled(GiHamburgerMenu)`
+  font-size: 30px;
+  color: #0a1128;
+  display: flex;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Header = () => {
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   return (
     <div>
       <Container>
@@ -73,6 +96,7 @@ export const Header = () => {
           <NavLink to="/unternehmen">Unternehmen</NavLink>
           <NavLink to="/karriere">Karriere</NavLink>
           <NavLink to="/kontakt">Kontakt</NavLink>
+          <BurgerMenu onClick={() => setMobileMenu(!mobileMenu)} />
         </Nav>
       </Container>
     </div>

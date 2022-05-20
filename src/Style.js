@@ -14,13 +14,14 @@ export const Button = styled.div``;
 
 export const ButtonText = styled(Link)`
   padding: 8px 40px;
-  border: 1px solid #fff;
+  border: 1px solid ${(props) => props.border};
+
   color: ${(props) => props.color};
   text-decoration: none;
 
   &:hover {
     background: #fff;
-    color: #6a3b3e;
+    color: #0a1128;
     transition: all 0.4s ease-in-out;
   }
 `;
