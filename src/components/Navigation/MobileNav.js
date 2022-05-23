@@ -10,7 +10,7 @@ const Navigation = styled.div`
 const WrapperMobileNav = styled.ul`
   @media (max-width: 768px) {
     height: 100vh;
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -39,7 +39,7 @@ const Ul = styled.ul`
 
   @media (max-width: 768px) {
     height: 100vh;
-    width: 50%;
+    width: 70%;
 
     display: flex;
     flex-direction: column;
