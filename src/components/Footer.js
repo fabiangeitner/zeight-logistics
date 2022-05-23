@@ -11,12 +11,9 @@ const FooterContainer = styled.div`
   align-items: center;
   padding: 25px;
 
-  @media (min-width: 576px) {
-    flex-direction: row;
-  }
-
   @media (min-width: 768px) {
     padding: 25px 50px;
+    flex-direction: row;
   }
 
   @media (min-width: 992px) {
@@ -24,17 +21,30 @@ const FooterContainer = styled.div`
   }
 `;
 
+const Creation = styled.div`
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+
+  @media (min-width: 1100px) {
+    width: 80%;
+  }
+`;
+
 const FooterNav = styled.div`
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
-  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  width: 30%;
   text-align: center;
-  row-gap: 20px;
 
   @media (min-width: 768px) {
     width: 30%;
-    flex-flow: row wrap;
   }
 
   @media (min-width: 1100px) {
@@ -46,13 +56,14 @@ const FooterLink = styled(Link)`
   list-style: none;
   text-decoration: none;
   color: #000;
+  margin: 25px;
 `;
 
 export const Footer = () => {
   return (
     <div>
       <FooterContainer>
-        <div>© 2022 Fabgei</div>
+        <Creation>© 2022 Fabgei</Creation>
         <FooterNav>
           <FooterLink to="/impressum">Impressum</FooterLink>
           <FooterLink to="/datenschutz">Datenschutz</FooterLink>
